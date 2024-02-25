@@ -1,5 +1,4 @@
 ﻿using CountriesApp.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace CountriesApp.Infrastructure.Persistence;
 

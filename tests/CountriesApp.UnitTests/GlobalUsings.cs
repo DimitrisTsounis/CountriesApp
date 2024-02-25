@@ -1,1 +1,9 @@
 global using Xunit;
+global using CountriesApp.Application.Common.Interfaces;
+global using CountriesApp.Application.Mappers;
+global using CountriesApp.Application.Models;
+global using CountriesApp.Application.Services;
+global using CountriesApp.Domain.Entities;
+global using CountriesApp.Infrastructure.Repositories;
+global using FluentAssertions;
+global using NSubstitute;

@@ -1,7 +1,4 @@
 ﻿using CountriesAPI.Validators;
-using CountriesApp.Application.Models;
-using CountriesApp.Application.Services;
-using FluentAssertions;
 using FluentValidation;
 
 namespace CountriesApp.UnitTests;

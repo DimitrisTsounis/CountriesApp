@@ -1,10 +1,6 @@
-﻿using CountriesApp.Application.Common.Interfaces;
-using CountriesApp.Infrastructure.ExternalApiClients;
+﻿using CountriesApp.Infrastructure.ExternalApiClients;
 using CountriesApp.Infrastructure.Persistence;
 using CountriesApp.Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace CountriesApp.Infrastructure;
 

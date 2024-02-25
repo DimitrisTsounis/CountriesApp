@@ -1,5 +1,4 @@
 ﻿using CountriesApp.Domain.Entities;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace CountriesApp.Infrastructure.Repositories;
 

@@ -1,6 +1,4 @@
-﻿using CountriesApp.Application.Common.Interfaces;
-
-namespace CountriesApp.Infrastructure.ExternalApiClients;
+﻿namespace CountriesApp.Infrastructure.ExternalApiClients;
 
 public class CountriesExternalApiClient : ICountriesExternalApiClient
 {

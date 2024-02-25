@@ -1,12 +1,4 @@
-﻿using CountriesApp.Application.Common.Interfaces;
-using CountriesApp.Application.Mappers;
-using CountriesApp.Application.Models;
-using CountriesApp.Application.Services;
-using CountriesApp.Domain.Entities;
-using CountriesApp.Infrastructure.Repositories;
-using FluentAssertions;
-using NSubstitute;
-using NSubstitute.ExceptionExtensions;
+﻿using NSubstitute.ExceptionExtensions;
 using System.Text.Json;
 
 namespace CountriesApp.UnitTests;
