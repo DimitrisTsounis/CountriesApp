@@ -31,7 +31,7 @@ public class ExceptionHandlingMiddleware : IMiddleware
 internal class ErrorDetails
 {
     public int Status { get; set; }
-    public string Type { get; set; }
-    public string Title { get; set; }
-    public string Detail { get; set; }
+    public string Type { get; set; } = default!;
+    public string Title { get; set; } = default!;
+    public string Detail { get; set; } = default!;
 }
