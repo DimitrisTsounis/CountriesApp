@@ -1,4 +1,5 @@
-﻿using CountriesApp.Application.Contracts;
+﻿using CountriesApp.Application.Common.Interfaces;
+using CountriesApp.Application.Models;
 using FluentValidation;
 
 namespace CountriesApp.Application.Services;

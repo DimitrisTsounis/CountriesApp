@@ -1,4 +1,4 @@
-﻿namespace CountriesApp.Application.Contracts;
+﻿namespace CountriesApp.Application.Models;
 
 public class RequestObj
 {

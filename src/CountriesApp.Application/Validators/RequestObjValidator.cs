@@ -1,4 +1,4 @@
-﻿using CountriesApp.Application.Contracts;
+﻿using CountriesApp.Application.Models;
 using FluentValidation;
 
 namespace CountriesAPI.Validators;

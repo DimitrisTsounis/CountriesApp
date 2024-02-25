@@ -1,4 +1,5 @@
-﻿using CountriesApp.Application.Services;
+﻿using CountriesApp.Application.Common.Interfaces;
+using CountriesApp.Application.Services;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +11,7 @@ public static class DependencyInjection
     {
         services.AddValidatorsFromAssemblyContaining<IApplicationMarker>();
         services.AddScoped<IIntegersService, IntegersService>();
+        services.AddScoped<ICountriesService, CountriesService>();
 
         return services;
     }

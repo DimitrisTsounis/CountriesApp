@@ -1,5 +1,5 @@
-﻿using CountriesApp.Application.Contracts;
-using CountriesApp.Application.Services;
+﻿using CountriesApp.Application.Common.Interfaces;
+using CountriesApp.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CountriesAPI.Controllers;
