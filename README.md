@@ -14,9 +14,9 @@ The GET endpoint firstly tries to fetch country details from an in-memory cache,
 - Unit Tests.
 - Docker Compose file included in order to run the API, spin up a docker image of MS SqlServer and apply migrations.
 - Supports Swagger for API documentation when run in development mode.
+- Includes Postman collection with the available API endpoints for debugging.
 
 ## Clone & Run app
-
 ### Prerequisites
 
 - [Docker](https://www.docker.com/get-started) installed on your machine.
@@ -29,27 +29,9 @@ The GET endpoint firstly tries to fetch country details from an in-memory cache,
     git clone https://github.com/DimitrisTsounis/CountriesApp.git
     ```
 
-2. Navigate to the project directory:
-
-    ```
-    cd ../CountriesApp
-    ```
-
-3. Run the following command to start the application:
-
-    ```
-    docker compose up -d --build
-    ```
-
-    This will set up the SQL Server, launch the API and apply migrations.
 
 
-## Debug
-### Prerequisites
 
-- [Docker](https://www.docker.com/get-started) installed on your machine.
-
-### Setup Instructions
 1. Pull SQL Server Docker Image:
 
     ```
@@ -62,8 +44,16 @@ The GET endpoint firstly tries to fetch country details from an in-memory cache,
     docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=sa12345!" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
     ```
 
-3. Run App through visual studio with "IIS Express" profile.
+3. Run App through visual studio with **IIS Express** profile.
 
+4. Connect to db with below credentials:
+    ```
+    Server: "localhost,1433"
+    Authentication type: "SQL Login"
+    User: "sa"
+    Pass: "sa12345!"
+    ```
+5. Send requests by using Swagger or export to your postman the included postman-collection.
 
 ## API Endpoints
 
