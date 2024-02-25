@@ -1,3 +1,4 @@
+using CountriesApp.Api.Middleware;
 using CountriesApp.Application;
 using CountriesApp.Infrastructure;
 
@@ -12,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-
+builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 
 
 var app = builder.Build();
@@ -25,6 +26,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 app.UseAuthorization();
 
