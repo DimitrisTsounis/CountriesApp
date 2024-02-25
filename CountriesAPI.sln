@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AAB8D509
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountriesApp.UnitTests", "tests\CountriesApp.UnitTests\CountriesApp.UnitTests.csproj", "{93183800-B7B5-4C3E-B091-F18BB3094702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountriesApp.Domain", "CountriesApp.Domain\CountriesApp.Domain.csproj", "{E9E7FAB0-BC6C-44A8-888E-6C6D7A542427}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountriesApp.Domain", "src\CountriesApp.Domain\CountriesApp.Domain.csproj", "{E9E7FAB0-BC6C-44A8-888E-6C6D7A542427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

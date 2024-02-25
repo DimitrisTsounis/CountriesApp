@@ -3,23 +3,26 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
+# EXPOSE 8080
 EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["CountriesAPI.csproj", "."]
-RUN dotnet restore "./././CountriesAPI.csproj"
+COPY ["src/CountriesApp.Api/CountriesApp.Api.csproj", "src/CountriesApp.Api/"]
+COPY ["src/CountriesApp.Application/CountriesApp.Application.csproj", "src/CountriesApp.Application/"]
+COPY ["src/CountriesApp.Domain/CountriesApp.Domain.csproj", "src/CountriesApp.Domain/"]
+COPY ["src/CountriesApp.Infrastructure/CountriesApp.Infrastructure.csproj", "src/CountriesApp.Infrastructure/"]
+RUN dotnet restore "./src/CountriesApp.Api/./CountriesApp.Api.csproj"
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "./CountriesAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/src/CountriesApp.Api"
+RUN dotnet build "./CountriesApp.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./CountriesAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./CountriesApp.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "CountriesAPI.dll"]
+ENTRYPOINT ["dotnet", "CountriesApp.Api.dll"]
